@@ -8,5 +8,6 @@ services:
     ports:
       - "2222:80"
     volumes:
+      - ./dai-book-viewer:/dai_book_viewer
       - ./sample:/usr/share/nginx/html/documents
       - ./annotations:/usr/share/nginx/html/annotations

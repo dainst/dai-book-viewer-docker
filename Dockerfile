@@ -18,10 +18,15 @@ RUN mkdir build
 RUN chmod -R 777 build
 RUN npm update -g \
     && npm install
+COPY config/viewer_preferences.json /dai_book_viewer/src/default_preferences.json
+#RUN cp /dai_book_viewer/src/dev_preferences.json /dai_book_viewer/src/default_preferences.json
 RUN npm run build
 RUN rm -R /usr/share/nginx/html/*
 RUN cp -r build/* /usr/share/nginx/html/
 RUN mv /usr/share/nginx/html/viewer.html /usr/share/nginx/html/index.html
+
+# annotation directory (for local annotations)
+RUN mkdir /usr/share/nginx/html/annotations
 
 #write startup-script (which creates settings.json)
 RUN touch /startup.sh \

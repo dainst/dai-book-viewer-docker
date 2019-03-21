@@ -1,0 +1,172 @@
+{
+  "persons": {
+    "items": [
+      {
+        "id": "p1",
+        "score": null,
+        "terms": [
+          "dolor sit"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 1,
+        "lemma": "Dolor Sit",
+        "coordinates": null,
+        "references": [
+          {
+            "id": "221093862",
+            "url": "http://viaf.org/viaf/221093862",
+            "type": "viaf"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "score": null,
+        "terms": [
+          "Aenean",
+          "Aeneas"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 1,
+        "lemma": "Aeneas",
+        "coordinates": null,
+        "references": [
+          {
+            "id": "221093862",
+            "url": "http://viaf.org/viaf/221093862",
+            "type": "viaf"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "score": null,
+        "terms": [
+          "Maecenas"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 3,
+        "lemma": "Maecenas",
+        "coordinates": null,
+        "references": [
+          {
+            "id": "221093862",
+            "url": "http://viaf.org/viaf/221093862",
+            "type": "viaf"
+          }
+        ]
+      }
+    ]
+  },
+  "locations": {
+    "items": [
+      {
+        "id": "l1",
+        "score": null,
+        "terms": [
+          "bibendum"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 4,
+        "lemma": "Bibendum",
+        "coordinates": [
+          "40.090214",
+          "13.492307"
+        ],
+        "references": [
+          {
+            "id": "2087878",
+            "url": "https://gazetteer.dainst.org/place/2379545",
+            "type": "idai"
+          }
+        ]
+      },
+      {
+        "id": "l2",
+        "score": null,
+        "terms": [
+          "tortor"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 1,
+        "lemma": "Tortor",
+        "coordinates": [
+          "41.890214",
+          "12.492307"
+        ],
+        "references": [
+          {
+            "id": "2087878",
+            "url": "https://gazetteer.dainst.org/place/2379545",
+            "type": "idai"
+          }
+        ]
+      }
+    ]
+  },
+  "keyterms": {
+    "items": [
+      {
+        "id": "l1",
+        "score": null,
+        "terms": [
+          "sapien"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 4,
+        "lemma": "sapien",
+        "references": [
+          {
+            "id": "sapien",
+            "url": "https://de.wikipedia.org/sapien",
+            "type": "wiki"
+          }
+        ]
+      },
+      {
+        "id": "l1",
+        "score": null,
+        "terms": [
+          "donec",
+          "Donec"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 6,
+        "lemma": "Donec",
+        "references": [
+          {
+            "id": "Donec",
+            "url": "https://de.wikipedia.org/Donec",
+            "type": "wiki"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+  "meta": {
+    "annotation_set": "example",
+    "publication_journal": "The Only True Journal",
+    "publication_language": "en",
+    "annotation_date": "2018-05-02T13:55:25.862Z",
+    "annotation_date_modified": "2018-05-02T13:55:25.862Z",
+    "annotation_creator": "paf",
+    "annotation_owner": "DAI"
+  }
+}
