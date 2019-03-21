@@ -10,16 +10,17 @@ x-env: &env
   ADMIN_EMAIL: dummy@address.local
 
 services:
-  omp3:
+  dai-book-viewer:
     build:
       context: .
       args:
         <<: *env
     image: dainst/cilantro-omp3
     ports:
-      - "2222:8000"
+      - "2222:80"
     environment:
       <<: *env
-
+    volumes:
+      - ./dai-book-viewer:/dai_book_viewer
 
 

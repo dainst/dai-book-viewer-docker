@@ -3,6 +3,7 @@ FROM nginx:1.14
 # dependencies
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install git apt-transport-https nano gnupg wget
+
 # we need a newer node version to get npm
 RUN wget https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
     && sh -c 'apt-key add nodesource.gpg.key > /dev/null 2>&1' \
@@ -10,21 +11,28 @@ RUN wget https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs
 
-RUN rm -R /usr/share/nginx/html/
-COPY frontend /usr/share/nginx/html
-COPY config/create_settings_from_env.sh /create_settings_from_env.sh
-WORKDIR /usr/share/nginx/html
+
+#RUN rm -R /usr/share/nginx/html/
+RUN git clone https://github.com/dainst/dai-book-viewer /dai_book_viewer && \
+    cd /dai_book_viewer && \
+    git submodule update --init --recursive
+
+COPY dai-book-viewer /dai_book_viewer
+
+# build viewer
+WORKDIR /dai_book_viewer
+RUN mkdir build
+RUN chmod -R 777 build
 RUN npm update -g \
     && npm install
+RUN npm run build
+RUN cp -r build/* /usr/share/nginx/html
 
 #write startup-script (which creates settings.json)
 RUN touch /startup.sh \
     && echo "#!/bin/bash\n" >> /startup.sh \
-    && echo "cd /usr/share/nginx/html/config\n" >> /startup.sh \
-    && echo "/create_settings_from_env.sh" >> /startup.sh \
     && echo "nginx -g 'daemon off;'" >> /startup.sh \
-    && chmod a+x /startup.sh \
-    && chmod a+x /create_settings_from_env.sh
+    && chmod a+x /startup.sh
 
 # startup script
 ENTRYPOINT ["/startup.sh"]

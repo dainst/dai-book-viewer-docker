@@ -1,0 +1,3 @@
+[submodule "dai-book-viewer"]
+	path = dai-book-viewer
+	url = https://github.com/dainst/dai-book-viewer
