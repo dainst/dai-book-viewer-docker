@@ -11,22 +11,17 @@ RUN wget https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs
 
-
-#RUN rm -R /usr/share/nginx/html/
-RUN git clone https://github.com/dainst/dai-book-viewer /dai_book_viewer && \
-    cd /dai_book_viewer && \
-    git submodule update --init --recursive
-
-COPY dai-book-viewer /dai_book_viewer
-
 # build viewer
+RUN git clone https://github.com/dainst/dai-book-viewer /dai_book_viewer
 WORKDIR /dai_book_viewer
 RUN mkdir build
 RUN chmod -R 777 build
 RUN npm update -g \
     && npm install
 RUN npm run build
-RUN cp -r build/* /usr/share/nginx/html
+RUN rm -R /usr/share/nginx/html/*
+RUN cp -r build/* /usr/share/nginx/html/
+RUN mv /usr/share/nginx/html/viewer.html /usr/share/nginx/html/index.html
 
 #write startup-script (which creates settings.json)
 RUN touch /startup.sh \

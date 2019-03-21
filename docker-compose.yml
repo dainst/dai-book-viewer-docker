@@ -15,7 +15,7 @@ services:
       context: .
       args:
         <<: *env
-    image: dainst/cilantro-omp3
+    image: dainst/cilantro-dai-book-viewer
     ports:
       - "2222:80"
     environment:
