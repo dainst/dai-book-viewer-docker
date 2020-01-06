@@ -157,6 +157,57 @@
       }
     ]
   },
+  "time_expressions": {
+    "items": [
+      {
+        "id": "t1",
+        "score": null,
+        "terms": [
+          "commodo"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 4,
+        "lemma": "",
+        "references": [
+          {
+            "id": "PKhlDWz28lrD",
+            "url": "https://chronontology.dainst.org/period/PKhlDWz28lrD",
+            "type": "chronontology"
+          }
+        ]
+      },
+      {
+        "id": "t2",
+        "score": null,
+        "terms": [
+          "Fusce ex nibh"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 1,
+        "lemma": "BC0034-03-12",
+        "references": []
+      },
+      {
+        "id": "t3",
+        "score": null,
+        "terms": [
+          "Cras justo orci"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 1,
+        "lemma": "BC04",
+        "references": []
+      }
+    ]
+
+
+  },
 
 
 
