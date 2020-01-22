@@ -12,7 +12,7 @@ RUN wget https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs
 
 # build viewer
-RUN git clone https://github.com/dainst/dai-book-viewer /dai_book_viewer
+COPY dai-book-viewer /dai_book_viewer
 WORKDIR /dai_book_viewer
 RUN mkdir build
 RUN chmod -R 777 build
