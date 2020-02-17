@@ -4,7 +4,7 @@
 ## Setup
 
     git submodule --init update
-
+    docker-compose build
     docker-compose up
     
 Goto: http://localhost:2223/?file=documents/example.pdf&pubid=example.json
