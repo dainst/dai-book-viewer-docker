@@ -23,16 +23,15 @@ COPY config/viewer_preferences.json /dai_book_viewer/src/default_preferences.jso
 RUN npm run build
 RUN rm -R /usr/share/nginx/html/*
 RUN cp -r build/* /usr/share/nginx/html/
+
 RUN mv /usr/share/nginx/html/viewer.html /usr/share/nginx/html/index.html
 
 # annotation directory (for local annotations)
 RUN mkdir /usr/share/nginx/html/annotations
 
 #write startup-script (which creates settings.json)
-RUN touch /startup.sh \
-    && echo "#!/bin/bash\n" >> /startup.sh \
-    && echo "nginx -g 'daemon off;'" >> /startup.sh \
-    && chmod a+x /startup.sh
+
+COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 # startup script
-ENTRYPOINT ["/startup.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
