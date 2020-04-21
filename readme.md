@@ -1,19 +1,28 @@
-# Dai-Book-Viewer Container
+# dai-book-viewer-docker
 
-## Development build
+## Setup
 
-    git clone https://github.com/dainst/dai-book-viewer-docker
-    cd dai-book-viewer-docker
-    git submodule init
-    git submodule update
-    cd ..
-    docker-compose -f docker-compose.dev.yml up
+    git submodule --init update
+
+
+## Development
+
+    docker-compose up
     
-Goto: http://localhost:2222/?file=documents/example.pdf&pubid=example.json
+The viewer is served at http://localhost:2223/?file=documents/example.pdf&pubid=example.json.
 
-To make changes visible in the dev application you might have to trigger a rebuild and copy some files into place:
 
-```
-docker exec -it dai-book-viewer-docker_dai-book-viewer_1 npm run build
-docker exec -it dai-book-viewer-docker_dai-book-viewer_1 cp -r build/* /usr/share/nginx/html/
-```
+If you make changes to the submodule, you have to rebuild the docker image each time to apply changes by running:
+
+    docker-compose build && docker-compose up
+
+## Usage for OJS plugin
+
+This repository is used to build relevant parts of our [OJS Plugin](https://github.com/dainst/dai-book-viewer-ojs-plugin).
+
+## Pushing a new docker image for cilantro
+
+    docker-compose -f docker-compose.cilantro.yml build
+
+    docker push dainst/cilantro-dai-book-viewer:latest
+

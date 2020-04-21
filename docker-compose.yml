@@ -4,9 +4,9 @@ services:
   dai-book-viewer:
     build:
       context: .
-    image: dainst/cilantro-dai-book-viewer
     ports:
-      - "2222:80"
+      - "2223:80"
     volumes:
       - ./sample:/usr/share/nginx/html/documents
       - ./annotations:/usr/share/nginx/html/annotations
+      - ./build:/build
