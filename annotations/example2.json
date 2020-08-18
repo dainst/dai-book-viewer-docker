@@ -1,0 +1,217 @@
+{
+  "persons": {
+    "items": [
+      {
+        "id": "p1",
+        "score": null,
+        "terms": [
+          "Person III",
+          "Person III, Queen of Placeville"
+        ],
+        "pages": [
+          0,
+          1
+        ],
+        "count": 2,
+        "lemma": "Person III",
+        "coordinates": null,
+        "references": [
+          {
+            "id": "Person",
+            "url": "https://en.wikipedia.org/wiki/Person",
+            "type": "wikipedia"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "score": null,
+        "terms": [
+          "Person McPerson"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 4,
+        "lemma": "Person MacPerson",
+        "coordinates": null,
+        "references": [
+          {
+            "id": "Person",
+            "url": "https://en.wikipedia.org/wiki/Person",
+            "type": "wikipedia"
+          }
+        ]
+      }
+    ]
+  },
+  "keyterms": {
+    "items": [
+      {
+        "id": "k1",
+        "score": null,
+        "terms": [
+          "keyterm-1",
+          "ABC DEF"
+        ],
+        "pages": [
+          0,
+          1
+        ],
+        "count": 5,
+        "lemma": "keyterm-1",
+        "references": []
+      },
+      {
+        "id": "k2",
+        "score": null,
+        "terms": [
+          "keyterm-2",
+          "DEF GHI"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 1,
+        "lemma": "keyterm-2",
+        "references": []
+      }
+    ]
+  },
+  "locations": {
+    "items": [
+      {
+        "id": "l1",
+        "score": null,
+        "terms": [
+          "Placeville"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 2,
+        "lemma": "Placeville",
+        "coordinates": [
+          "40.090214",
+          "13.492307"
+        ],
+        "references": [
+          {
+            "id": "2087878",
+            "url": "https://gazetteer.dainst.org/place/2379545",
+            "type": "idai"
+          }
+        ]
+      },
+      {
+        "id": "l2",
+        "score": null,
+        "terms": [
+          "Placelandia"
+        ],
+        "pages": [
+          0,
+          1
+        ],
+        "count": 2,
+        "lemma": "Placelandia",
+        "coordinates": [
+          "51.52392",
+          "6.9285"
+        ],
+        "references": [
+          {
+            "id": "is-this-needed-anywhere-?",
+            "url": "https://gazetteer.dainst.org/place/2051407",
+            "type": "idai"
+          }
+        ]
+      },
+      {
+        "id": "l3",
+        "score": null,
+        "terms": [
+          "Herðubreið",
+          "Ljósufjöll",
+          "Snæfellsjökull",
+          "北京市",
+          "القدس",
+          "יְרוּשָׁלַיִם",
+          "Αθήνα"
+        ],
+        "pages": [
+          0,
+          1
+        ],
+        "count": 6,
+        "lemma": "Non-Ascii-Places",
+        "coordinates": [
+          "64.128288",
+          "-21.827774"
+        ],
+        "references": [
+          {
+            "id": "is-this-needed-anywhere-?",
+            "url": "https://gazetteer.dainst.org/place/2064873",
+            "type": "idai"
+          },
+          {
+            "id": "is-this-needed-anywhere-?",
+            "url": "https://en.wikipedia.org/wiki/ASCII",
+            "type": "wikipedia"
+          }
+        ]
+      }
+    ]
+  },
+  "time_expressions": {
+    "items": [
+      {
+        "id": "t1",
+        "score": null,
+        "terms": [
+          "Period of The Time Before"
+        ],
+        "pages": [
+          0,
+          1
+        ],
+        "count": 2,
+        "lemma": "Time Before",
+        "references": [
+          {
+            "id": "Ng976CoU1li0",
+            "url": " http://chronontology.dainst.org/period/Ng976CoU1li0",
+            "type": "chronontology"
+          }
+        ]
+      },
+      {
+        "id": "t2",
+        "score": null,
+        "terms": [
+          "June 2006"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 1,
+        "lemma": "2006-06",
+        "references": []
+      },
+      {
+        "id": "t3",
+        "score": null,
+        "terms": [
+          "Third keyterm-1 period of Placelandia"
+        ],
+        "pages": [
+          0
+        ],
+        "count": 1,
+        "lemma": "Third keyterm-1 period",
+        "references": []
+      }
+    ]
+  }
+}

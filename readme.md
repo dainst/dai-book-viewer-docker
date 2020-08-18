@@ -8,9 +8,11 @@
 ## Development
 
     docker-compose up
-    
-The viewer is served at http://localhost:2223/?file=documents/example.pdf&pubid=example.json.
 
+The examples in [/sample](sample) are served together with the annotations in [/annotations](annotations) on these urls:
+
+* http://localhost:2223/?file=documents/example.pdf&pubid=example.json
+* http://localhost:2223/?file=documents/example2.pdf&pubid=example2.json
 
 If you make changes to the submodule, you have to rebuild the docker image each time to apply changes by running:
 
