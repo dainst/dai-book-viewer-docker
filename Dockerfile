@@ -11,26 +11,25 @@ RUN wget https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs
 
-# build viewer
-COPY dai-book-viewer /dai_book_viewer
+# build viewer dependencies
 WORKDIR /dai_book_viewer
-RUN mkdir build
-RUN chmod -R 777 build
+COPY dai-book-viewer/package.json .
 RUN npm update -g \
     && npm install
-COPY config/viewer_preferences.json /dai_book_viewer/src/default_preferences.json
-#RUN cp /dai_book_viewer/src/dev_preferences.json /dai_book_viewer/src/default_preferences.json
-RUN npm run build
-RUN rm -R /usr/share/nginx/html/*
-RUN cp -r build/* /usr/share/nginx/html/
 
-RUN mv /usr/share/nginx/html/viewer.html /usr/share/nginx/html/index.html
+# build viewer
+ENV SERVE_DIR="/usr/share/nginx/html"
+COPY dai-book-viewer .
+COPY config/viewer_preferences.json src/default_preferences.json
+RUN mkdir -p build \
+    && chmod -R 777 build \
+    && npm run build \
+    && rm -R "$SERVE_DIR"/* \
+    && mkdir "$SERVE_DIR"/annotations \
+    && cp -r build/* "$SERVE_DIR" \
+    && mv "$SERVE_DIR"/viewer.html "$SERVE_DIR"/index.html
 
-# annotation directory (for local annotations)
-RUN mkdir /usr/share/nginx/html/annotations
-
-#write startup-script (which creates settings.json)
-
+# write startup-script
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 # startup script

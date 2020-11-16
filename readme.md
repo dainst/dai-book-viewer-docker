@@ -16,7 +16,7 @@ The examples in [/sample](sample) are served together with the annotations in [/
 
 If you make changes to the submodule, you have to rebuild the docker image each time to apply changes by running:
 
-    docker-compose build && docker-compose up
+    docker-compose up --build
 
 ## Usage for OJS plugin
 
