@@ -27,7 +27,8 @@
         "id": "p2",
         "score": null,
         "terms": [
-          "Person McPerson"
+          "Person McPerson",
+          "Person McPer-son"
         ],
         "pages": [
           0
@@ -135,8 +136,8 @@
           "Ljósufjöll",
           "Snæfellsjökull",
           "北京市",
-          "القدس",
-          "יְרוּשָׁלַיִם",
+          "القُدس",
+          "יְרוּשָׁ לַיִם",
           "Αθήνα"
         ],
         "pages": [
