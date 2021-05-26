@@ -15,7 +15,7 @@
 
   "annotationSources": [
     {
-      "source": "http://localhost:2223/",
+      "source": "http://localhost:2223",
       "identifier": "pubid"
     }
   ],
