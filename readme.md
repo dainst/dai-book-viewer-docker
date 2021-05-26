@@ -20,7 +20,12 @@ If you make changes to the submodule, you have to rebuild the docker image each 
 
 ## Usage for OJS plugin
 
-This repository is used to build relevant parts of our [OJS Plugin](https://github.com/dainst/dai-book-viewer-ojs-plugin).
+This repository is used to build relevant parts of our [OJS Plugin](https://github.com/dainst/dai-book-viewer-ojs-plugin). To copy the build directory for OJS:
+
+```bash
+docker-compose up --build
+docker cp dai-book-viewer-docker_dai-book-viewer_1:/dai_book_viewer/build /path/to/OJS/plugin
+```
 
 ## Pushing a new docker image for cilantro
 

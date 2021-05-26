@@ -9,4 +9,3 @@ services:
     volumes:
       - ./sample:/usr/share/nginx/html/documents
       - ./annotations:/usr/share/nginx/html/annotations
-      - ./build:/build
