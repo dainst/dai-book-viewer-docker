@@ -1,7 +1,0 @@
-version: '3.7'
-
-services:
-  dai-book-viewer:
-    image: dainst/cilantro-dai-book-viewer
-    build:
-      context: .

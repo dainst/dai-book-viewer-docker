@@ -12,10 +12,9 @@
   "disableTextLayer": false,
   "useOnlyCssZoom": false,
   "externalLinkTarget": 0,
-
   "annotationSources": [
     {
-      "source": "http://localhost:2223",
+      "source": "local",
       "identifier": "pubid"
     }
   ],
