@@ -57,5 +57,5 @@ Options         ro,noatime,rsize=8192,wsize=8192,tcp,timeo=14   (Defaults, but '
 For prod use the same but change the mountpoint:
 
 ```
-Mount Point     /volume3/DockerSwarm/bookviewer_public
+Mount Point     /volume3/daicloud09/idaiworld-scans/idaibookviewer_public
 ```
