@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+
+  bookviewer:
+    image: dainst/dai-book-viewer-test
+    build:
+      context: .
+    volumes:
+      - bookviewer-data:/usr/share/nginx/html/data:ro
+    networks:
+      - web
+    deploy:
+      labels:
+        - "traefik.docker.network=web"
+        - "traefik.enable=true"
+        - "traefik.frontend.rule=Host:viewer.test.idai.world"
+        - "traefik.port=80"
+
+volumes:
+  bookviewer-data:
+    name: bookviewer_data
+    external: true
+
+networks:
+  web:
+    external: true

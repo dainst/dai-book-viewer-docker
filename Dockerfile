@@ -29,8 +29,4 @@ RUN mkdir -p build \
     && cp -r build/* "$SERVE_DIR" \
     && mv "$SERVE_DIR"/viewer.html "$SERVE_DIR"/index.html
 
-# write startup-script
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-
-# startup script
-ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
