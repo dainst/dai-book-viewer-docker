@@ -36,7 +36,7 @@ docker-compose -f docker-compose.test.yml build
 docker push dainst/dai-book-viewer-test
 # OR
 docker-compose -f docker-compose.prod.yml build
-docker push dainst/dai-book-viewer-test
+docker push dainst/dai-book-viewer
 ```
 
 Copy the `docker-compose.(test|prod).yml` as a Stack definition in the [test](https://portainer.test.idai.world) or [prod portainer](https://portainer.idai.world).
