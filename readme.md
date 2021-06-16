@@ -41,21 +41,44 @@ docker push dainst/dai-book-viewer
 
 Copy the `docker-compose.(test|prod).yml` as a Stack definition in the [test](https://portainer.test.idai.world) or [prod portainer](https://portainer.idai.world).
 
-On a new portainer setup you would need to create the external volumes pointing to the daicloud volumes.
+### Volumes
 
-Volumes > Add Volume
+On a new portainer setup you would need to create external volumes pointing to the daicloud volumes with the data to serve.
+
+`Volumes > Add Volume`
+
+Use these defaults for all volumes:
 
 ```
-Name            bookviewer_data
-Use NFS volume  [X]
+Name            [see below]
+Driver          local
+Use NFS volume  [true]
 Address         10.201.0.95
 NFS Version     NFS
-Mount Point     /volume3/DockerSwarmTest/bookviewer_public
+Mount Point     [see below]
 Options         ro,noatime,rsize=8192,wsize=8192,tcp,timeo=14   (Defaults, but 'rw' -> 'ro')
 ```
 
-For prod use the same but change the mountpoint:
+Create two volumes in **TEST**
 
 ```
+Name            bookviewer_data
+Mount Point     /volume3/DockerSwarmTest/bookviewer_public
+```
+
+```
+Name            bookviewer_repository_data
+Mount Point     /volume3/DockerSwarmTest/workbench_data/repository
+```
+
+Create two volumes in **PRODUCTION**
+
+```
+Name            bookviewer_data
 Mount Point     /volume3/daicloud09/idaiworld-scans/idaibookviewer_public
+```
+
+```
+Name            bookviewer_repository_data
+Mount Point     /volume3/daicloud09/idaiworld-scans/idaiworkbench/repository
 ```

@@ -8,6 +8,7 @@ services:
       context: .
     volumes:
       - bookviewer-data:/usr/share/nginx/html/data:ro
+      - bookviewer-repository-data:/usr/share/nginx/html/documents:ro
     networks:
       - web
     deploy:
@@ -20,6 +21,9 @@ services:
 volumes:
   bookviewer-data:
     name: bookviewer_data
+    external: true
+  bookviewer-repository-data:
+    name: bookviewer_repository_data
     external: true
 
 networks:
